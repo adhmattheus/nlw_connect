@@ -20,7 +20,7 @@ public class RegisterBookCheckoutUseCase
 
         Validate(dbContext, bookId);
 
-        var user = _loggedUser.User();
+        var user = _loggedUser.User(dbContext);
 
         var entity = new Domain.Entities.Checkout
         {

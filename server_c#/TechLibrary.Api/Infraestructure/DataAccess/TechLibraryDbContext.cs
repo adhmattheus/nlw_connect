@@ -10,6 +10,6 @@ public class TechLibraryDbContext : DbContext
     public DbSet<Checkout> Checkouts { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Data Source=D:\\Workspace\\TechLibraryDb.db");
+        optionsBuilder.UseSqlite("Data Source=C:\\Users\\mamenezes\\Downloads\\TechLibraryDb.db");
     }
 }

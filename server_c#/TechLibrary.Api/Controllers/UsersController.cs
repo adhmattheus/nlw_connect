@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TechLibrary.Api.UseCases.Users.Get;
+using TechLibrary.Api.UseCases.Users.GetAll;
 using TechLibrary.Api.UseCases.Users.Register;
 using TechLibrary.Communication.Requests;
 using TechLibrary.Communication.Responses;
@@ -19,5 +21,16 @@ public class UsersController : ControllerBase
 
         return Created(string.Empty, response);
 
+    }
+
+    [HttpGet]
+    [ProducesResponseType(typeof(List<ResponseUserJson>), StatusCodes.Status200OK)]
+    public IActionResult Get()
+    {
+        var useCase = new GetUserUseCase();
+
+        var response = useCase.Execute();
+
+        return Ok(response);
     }
 } 
