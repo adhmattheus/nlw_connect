@@ -30,6 +30,7 @@ public class FilterBookUseCase
             .ToList();
 
         var totalCount = 0;
+
         if(string.IsNullOrWhiteSpace(request.Title))
             totalCount = dbContext.Books.Count();
         else

@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TechLibrary.Api.UseCases.Users.Get;
-using TechLibrary.Api.UseCases.Users.GetAll;
 using TechLibrary.Api.UseCases.Users.Register;
 using TechLibrary.Communication.Requests;
 using TechLibrary.Communication.Responses;
